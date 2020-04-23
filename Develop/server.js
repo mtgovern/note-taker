@@ -24,6 +24,16 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // routes
 
+// =============================================================================
+// LISTENER
+// The below code effectively "starts" our server
+// =============================================================================
+
+app.listen(PORT, function() {
+  console.log("App listening on PORT: " + PORT);
+});
+
+
 // api call response for all the notes, and sends the results to the browser as an array of object
 
 app.get("/api/notes", function(err, res) {
